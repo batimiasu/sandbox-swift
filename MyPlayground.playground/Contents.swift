@@ -1,23 +1,19 @@
-// conversion
-//var msg = "hoge"
-//var number = 48
-//var a = msg + String(number)
-
+// // conversion
+// ////var msg = "hoge"
+////// var number = 48
+/// /var a = msg + String(number)
 // タプル
 //let error = (404, "Not Found")
 //error.0
 //error.1
-
 //let error = (code:404, msg:"Not Found")
 //error.code
 //error.msg
-
 let error = (404, "Not Found")
 //let (code, msg) = error
 //let (code, _) = error // アンダースコアで値を廃棄
 //code
 //msg
-
 // 配列
 var colors: [String] = ["blue", "pink"]
 colors[0] // 添字
@@ -122,3 +118,20 @@ for var i = 0; i < 10; i++ {
     }
     print(i)
 }
+
+// Optional
+// var s: String?
+// s = nil
+let name: String? = "batimiasu"
+// let msg = "hello" + name!
+// if name != nil {
+//    let msg = "hello" + name!
+// }
+
+// if let s = name {
+//    let mdg = "hello" + s
+// }
+
+var label: String!
+label = "score"
+print(label)
