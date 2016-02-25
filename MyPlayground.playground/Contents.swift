@@ -16,22 +16,22 @@ let error = (404, "Not Found")
 //msg
 // 配列
 var colors: [String] = ["blue", "pink"]
-colors[0] // 添字
+// colors[0] // 添字
 colors[1] = "red"
-colors
+// colors
 
 colors.count
 colors.isEmpty
 
 colors.append("green")
 colors.insert("grey", atIndex: 1)
-colors
+// colors
 
 colors.removeAtIndex(1)
-colors
+// colors
 
 colors.removeLast()
-colors
+// colors
 
 let secondColor = colors.removeAtIndex(1)
 secondColor
@@ -48,13 +48,13 @@ users.count
 users.isEmpty
 
 users["github"] = 900
-users
+// users
 
 users.removeValueForKey("github")
-users
+// users
 
 users["niki"] = 900
-users
+// users
 
 users.updateValue(900, forKey: "batimiasu")
 
