@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Omikuji" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWW-D8-KoE">
+                                <rect key="frame" x="263" y="388.5" width="75" height="30"/>
+                                <state key="normal" title="運勢を占う"/>
+                                <connections>
+                                    <action selector="getOmikuji:" destination="BYZ-38-t0r" eventType="touchUpInside" id="arg-eq-fCM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="????" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDY-nS-Mi7">
+                                <rect key="frame" x="237" y="262" width="126" height="76.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの運勢は..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSx-d4-bbF">
+                                <rect key="frame" x="233.5" y="191.5" width="133" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VDY-nS-Mi7" firstAttribute="top" secondItem="jSx-d4-bbF" secondAttribute="bottom" constant="50" id="241-ck-Ac5"/>
+                            <constraint firstItem="jSx-d4-bbF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4l5-bV-nEE"/>
+                            <constraint firstItem="VDY-nS-Mi7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SaN-Lc-Hrg"/>
+                            <constraint firstItem="OWW-D8-KoE" firstAttribute="top" secondItem="VDY-nS-Mi7" secondAttribute="bottom" constant="50" id="UlF-u5-ygp"/>
+                            <constraint firstItem="OWW-D8-KoE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hU8-hR-ndD"/>
+                            <constraint firstItem="VDY-nS-Mi7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ig8-z2-gvv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myLable" destination="VDY-nS-Mi7" id="ws1-ou-Fea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="353"/>
+        </scene>
+    </scenes>
+</document>
