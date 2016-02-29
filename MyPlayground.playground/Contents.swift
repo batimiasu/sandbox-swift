@@ -344,25 +344,95 @@
 //}
 
 // type casting
-class User {
-    var name: String
-    init(name: String) {
-        self.name = name
-    }
-}
-class AdminUser: User {}
-class SomeUser {}
-let tom = User(name: "Tom")
-let bob = AdminUser(name: "Bob")
-let steve = SomeUser()
-let users: [AnyObject] = [tom, bob, steve]
-
-for user in users {
-//    if user is AdminUser {
-//        let u = user as! AdminUser
+//class User {
+//    var name: String
+//    init(name: String) {
+//        self.name = name
+//    }
+//}
+//class AdminUser: User {}
+//class SomeUser {}
+//
+//let tom = User(name: "Tom")
+//let bob = AdminUser(name: "Bob")
+//let steve = SomeUser()
+//let users: [AnyObject] = [tom, bob, steve]
+//
+//for user in users {
+////    if user is AdminUser {
+////        let u = user as! AdminUser
+////        print(u.name)
+////    }
+//    if let u = user as? AdminUser {
 //        print(u.name)
 //    }
-    if let u = user as? AdminUser {
-        print(u.name)
+//}
+
+// 構造体
+//struct UserStruct {
+//    var name: String
+//    var score: Int  = 0
+//    init(name: String) {
+//        self.name = name
+//    }
+//    mutating func upgrade() {
+//        score++
+//    }
+//}
+//class User {
+//    var name: String
+//    var score: Int  = 0
+//    init(name: String) {
+//        self.name = name
+//    }
+//    func upgrade() {
+//        score++
+//    }
+//}
+//
+//// クラスは参照先をコピー
+//var tom = User(name: "Tom")
+//var tom2 = tom
+//tom2.name = "tom2"
+//tom.name
+//
+//// 構造体は実体をコピー
+//var bob = UserStruct(name: "Bob")
+//var bob2 = bob
+//bob2.name = "bob2"
+//bob.name
+
+// 拡張
+//extension String {
+//    var size: Int {
+//        return self.characters.count
+//    }
+//    func dummy() -> String {
+//        return "dummy"
+//    }
+//}
+//
+//var s: String = "hoge"
+//s.size
+//s.dummy()
+
+// ジェネリクス
+
+//func getIntArray(item: Int, count: Int) -> [Int] {
+//    var result = [Int]()
+//    for _ in 0..<count {
+//        result.append(item)
+//    }
+//    return result
+//}
+
+func getArray<T>(item: T, count: Int) -> [T] {
+    var result = [T]()
+    for _ in 0..<count {
+        result.append(item)
     }
+    return result
 }
+getArray(8, count: 3)
+getArray("hello", count: 3)
+getArray(2.3, count: 3)
